@@ -1,0 +1,545 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e8eef5;
+  background: #091116;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at 78% 12%, #16332f 0, #091116 34rem), #091116;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #071512;
+  background: #74d2b4;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 30px 0 38px;
+}
+
+.topbar,
+.hero,
+.footer-line {
+  display: flex;
+  align-items: center;
+}
+
+.topbar {
+  gap: 13px;
+  border-bottom: 1px solid rgba(164, 196, 187, 0.15);
+  padding-bottom: 22px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid #74d2b4;
+  border-radius: 12px;
+  color: #9be4ce;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow,
+.card-label,
+.card-index,
+.card-status,
+.phase-chip,
+.footer-line {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #8da5a0;
+}
+
+.eyebrow.accent {
+  color: #74d2b4;
+}
+
+.brand-name {
+  margin: 2px 0 0;
+  color: #f2f6f7;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.phase-chip {
+  margin-left: auto;
+  border: 1px solid rgba(116, 210, 180, 0.35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #9be4ce;
+}
+
+.hero {
+  justify-content: space-between;
+  gap: 40px;
+  padding: 90px 0 70px;
+}
+
+h1 {
+  max-width: 720px;
+  margin: 14px 0 18px;
+  color: #f2f7f7;
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 520;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.hero-copy {
+  max-width: 590px;
+  margin: 0;
+  color: #9fb2b3;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.readiness-card {
+  display: flex;
+  min-width: 260px;
+  gap: 13px;
+  align-items: flex-start;
+  border: 1px solid rgba(116, 210, 180, 0.25);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(23, 50, 48, 0.48);
+}
+
+.readiness-card.waiting {
+  border-color: rgba(237, 188, 110, 0.3);
+  background: rgba(64, 46, 25, 0.35);
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: #74d2b4;
+  box-shadow: 0 0 0 5px rgba(116, 210, 180, 0.12);
+}
+
+.waiting .status-dot {
+  background: #edbc6e;
+  box-shadow: 0 0 0 5px rgba(237, 188, 110, 0.12);
+}
+
+.card-label {
+  margin: 0 0 7px;
+  color: #8da5a0;
+}
+
+.card-value {
+  max-width: 190px;
+  margin: 0;
+  color: #edf8f4;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.foundation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.info-card {
+  min-height: 218px;
+  border: 1px solid rgba(164, 196, 187, 0.15);
+  border-radius: 16px;
+  padding: 22px;
+  background: rgba(12, 25, 30, 0.62);
+}
+
+.card-index {
+  color: #6e817e;
+}
+
+.info-card h2 {
+  margin: 52px 0 10px;
+  color: #eaf3f0;
+  font-size: 20px;
+  font-weight: 560;
+}
+
+.info-card p {
+  min-height: 48px;
+  margin: 0 0 16px;
+  color: #8da5a0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.card-status {
+  color: #74d2b4;
+  font-weight: 700;
+}
+
+.card-status.muted {
+  color: #edbc6e;
+}
+
+.documents-section {
+  margin-top: 92px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 12px 0 0;
+  color: #eaf3f0;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 560;
+  letter-spacing: -0.04em;
+}
+
+.section-heading > p {
+  max-width: 350px;
+  margin: 0 0 3px;
+  color: #8da5a0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.upload-panel,
+.documents-panel {
+  border: 1px solid rgba(164, 196, 187, 0.15);
+  border-radius: 16px;
+  background: rgba(12, 25, 30, 0.62);
+}
+
+.upload-panel {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+}
+
+.upload-panel > div:first-child {
+  margin-right: auto;
+}
+
+.upload-hint {
+  margin: 5px 0 0;
+  color: #6e817e;
+  font-size: 12px;
+}
+
+.file-picker {
+  max-width: 250px;
+  overflow: hidden;
+  border: 1px dashed #45635d;
+  border-radius: 9px;
+  padding: 11px 13px;
+  color: #b6cbc5;
+  cursor: pointer;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-picker input {
+  display: none;
+}
+
+.upload-message {
+  flex-basis: 100%;
+  margin: 0;
+  color: #9be4ce;
+  font-size: 12px;
+}
+
+.documents-panel {
+  margin-top: 14px;
+  padding: 20px;
+}
+
+.documents-heading,
+.document-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.documents-heading {
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(164, 196, 187, 0.12);
+}
+
+.documents-heading .card-label {
+  margin: 0;
+}
+
+.documents-heading > span {
+  color: #6e817e;
+  font-size: 12px;
+}
+
+.empty-state {
+  margin: 30px 0 10px;
+  color: #8da5a0;
+  font-size: 14px;
+}
+
+.document-row {
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(164, 196, 187, 0.08);
+}
+
+.document-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.document-name,
+.document-meta {
+  margin: 0;
+}
+
+.document-name {
+  color: #eaf3f0;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.document-meta {
+  margin-top: 5px;
+  color: #6e817e;
+  font-size: 12px;
+}
+
+.document-status {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.document-delete {
+  border: 1px solid rgba(224, 126, 126, 0.45);
+  background: transparent;
+  color: #e8a1a1;
+  font-size: 12px;
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: #9be4ce;
+  background: rgba(116, 210, 180, 0.12);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.status-pill.uploaded,
+.status-pill.processing {
+  color: #edbc6e;
+  background: rgba(237, 188, 110, 0.12);
+}
+
+.status-pill.failed {
+  color: #f19b9b;
+  background: rgba(241, 155, 155, 0.12);
+}
+
+.document-error {
+  max-width: 300px;
+  color: #f19b9b;
+  font-size: 11px;
+  text-align: right;
+}
+
+.query-section {
+  margin-top: 92px;
+}
+
+.query-panel {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  border: 1px solid rgba(116, 210, 180, 0.25);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(23, 50, 48, 0.3);
+}
+
+.query-panel textarea {
+  width: 100%;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  color: #eaf3f0;
+  background: transparent;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.query-panel textarea::placeholder {
+  color: #6e817e;
+}
+
+.query-panel button {
+  flex: 0 0 auto;
+}
+
+.query-error {
+  margin: 14px 0 0;
+  color: #f19b9b;
+  font-size: 13px;
+}
+
+.answer-panel {
+  margin-top: 14px;
+  border: 1px solid rgba(164, 196, 187, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(12, 25, 30, 0.62);
+}
+
+.answer-panel .card-label {
+  margin: 0;
+}
+
+.answer-text {
+  margin: 16px 0 18px;
+  color: #eaf3f0;
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.citation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.citation {
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #9be4ce;
+  background: rgba(116, 210, 180, 0.1);
+  font-size: 11px;
+}
+
+.query-meta {
+  margin: 16px 0 0;
+  color: #6e817e;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-line {
+  gap: 14px;
+  margin-top: 70px;
+  color: #6e817e;
+}
+
+.footer-rule {
+  width: 70px;
+  height: 1px;
+  background: #38514d;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 32px, 600px);
+  }
+
+  .hero {
+    display: block;
+    padding: 62px 0 48px;
+  }
+
+  .readiness-card {
+    width: fit-content;
+    margin-top: 34px;
+  }
+
+  .foundation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading,
+  .upload-panel {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 14px;
+  }
+
+  .file-picker,
+  .upload-panel button {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin-top: 16px;
+  }
+
+  .upload-message {
+    margin-top: 14px;
+  }
+
+  .query-panel {
+    display: block;
+  }
+
+  .query-panel button {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .document-row {
+    align-items: flex-start;
+  }
+
+  .phase-chip {
+    display: none;
+  }
+}

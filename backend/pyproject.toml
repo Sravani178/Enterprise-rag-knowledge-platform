@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-knowledge-api"
+version = "0.1.0"
+description = "FastAPI service for the Enterprise AI Knowledge Platform"
+requires-python = ">=3.12"
+dependencies = [
+    "argon2-cffi>=23,<26",
+    "boto3>=1.36,<2.0",
+    "alembic>=1.14,<2.0",
+    "celery[redis]>=5.4,<6.0",
+    "fastapi>=0.115,<1.0",
+    "httpx>=0.28,<1.0",
+    "pymupdf>=1.25,<2.0",
+    "PyJWT>=2.10,<3.0",
+    "psycopg[binary]>=3.2,<4.0",
+    "pydantic-settings>=2.7,<3.0",
+    "python-multipart>=0.0.20,<1.0",
+    "qdrant-client>=1.13,<2.0",
+    "sqlalchemy[asyncio]>=2.0.36,<3.0",
+    "uvicorn[standard]>=0.34,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9.0",
+    "pytest-asyncio>=0.25,<1.0",
+    "ruff>=0.9,<1.0",
+]
+reranking = [
+    "sentence-transformers>=3.0,<4.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
